@@ -1,0 +1,6 @@
+FROM docker.io/python:3.14.0rc2-slim
+RUN pip install flask
+WORKDIR /app
+COPY app.py .
+EXPOSE 8000
+CMD ["python", "app.py"]
